@@ -1,11 +1,11 @@
 from fastapi import APIRouter, Depends
 import jieba
 from common.baseitem import CutWorldsEnum
-import paddlehub as hub
+# import paddlehub as hub
 
 
 router = APIRouter()
-senta_global = hub.Module(name="senta_cnn")
+# senta_global = hub.Module(name="senta_cnn")
 
 
 def get_cut_worlds_enum(num: int):
@@ -39,16 +39,16 @@ def split_to_words(content: str, model: CutWorldsEnum = Depends(get_cut_worlds_e
     return {'result': result, 'model': model.name}
 
 
-@router.get('/senta')
-def senta(content: str):
-    """ Description 语句情绪分析
+# @router.get('/senta')
+# def senta(content: str):
+#     """ Description 语句情绪分析
 
-    :type content:str: 分析的语句内容
-    :param content:str:
+#     :type content:str: 分析的语句内容
+#     :param content:str:
 
-    :raises:
+#     :raises:
 
-    :rtype:
-    """
-    results = senta_global.sentiment_classify(texts=[content], use_gpu=False, batch_size=1)
-    return {'result': results, 'model': 'senta_cnn'}
+#     :rtype:
+#     """
+#     results = senta_global.sentiment_classify(texts=[content], use_gpu=False, batch_size=1)
+#     return {'result': results, 'model': 'senta_cnn'}

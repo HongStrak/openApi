@@ -2,8 +2,3 @@ uvicorn==0.17.5
 fastapi==0.74.0
 jinja2==3.0.1
 jieba==0.42.1
-paddlehub==2.2.0
-paddlepaddle==2.3.0
-tb-paddle==0.4.0
-paddlenlp==2.2.4
-paddle2onnx==0.9.1

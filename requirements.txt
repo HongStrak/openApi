@@ -2,3 +2,4 @@ uvicorn==0.17.5
 fastapi==0.74.0
 jinja2==3.0.1
 jieba==0.42.1
+paddlehub==2.2.0
